@@ -29,7 +29,8 @@ def get_candles_by_ticker(ticker, from_date, to_date):
 
 
 if __name__ == "__main__":
-    prices = get_candles_by_ticker("AAPL", datetime(2021, 1, 1), datetime(2022, 1, 1))
+    ticker = "AMD"
+    prices = get_candles_by_ticker(ticker, datetime(2021, 1, 1), datetime(2022, 1, 1))
 
     df = pd.DataFrame(prices, columns=['open', 'close', 'low', 'high', 'volume'])
-    df.to_csv('AAPL_candles.csv')
+    df.to_csv('%s_candles.csv' % ticker)
