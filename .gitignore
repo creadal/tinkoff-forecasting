@@ -1,0 +1,5 @@
+/venv
+/.ipynb_checkpoints
+/.idea
+/main.ipynb
+/AAPL_candles.csv
